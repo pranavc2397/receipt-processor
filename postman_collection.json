@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "571b166e-4a5e-4bf4-8f76-3dcc42915c71",
+		"name": "go application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27736941"
+	},
+	"item": [
+		{
+			"name": "Prcessing Receipt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"retailer\": \"Target\",\r\n  \"purchaseDate\": \"2022-01-01\",\r\n  \"purchaseTime\": \"13:01\",\r\n  \"items\": [\r\n    {\"shortDescription\": \"Mountain Dew 12PK\", \"price\": \"6.49\"},\r\n    {\"shortDescription\": \"Emils Cheese Pizza\", \"price\": \"12.25\"},\r\n    {\"shortDescription\": \"Knorr Creamy Chicken\", \"price\": \"1.26\"},\r\n    {\"shortDescription\": \"Doritos Nacho Cheese\", \"price\": \"3.35\"},\r\n    {\"shortDescription\": \"   Klarbrunn 12-PK 12 FL OZ  \", \"price\": \"12.00\"}\r\n  ],\r\n  \"total\": \"35.35\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/receipts/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Points",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/receipts/{{receipt_id}}/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"receipts",
+						"{{receipt_id}}",
+						"points"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "receipt_id",
+			"value": "dd5464de-a143-45e4-bb33-a257b7b7b921"
+		},
+		{
+			"key": "receipt_id-2",
+			"value": "75eef014-c68d-4203-a17d-9616bfde4899"
+		},
+		{
+			"key": "r_id",
+			"value": "dab1143e-d2fa-4ea0-b212-6ffc87bf2fac"
+		}
+	]
+}
