@@ -22,8 +22,8 @@ Before running the application, ensure you have the following installed:
 
 The commands to build and run the receipt-processor image and container are as follows:
 
-$ docker build --tag receipt-processor .
-$ docker run -d -p 3000:3000 receipt-processor
+`$ docker build --tag receipt-processor .`
+`$ docker run -d -p 3000:3000 receipt-processor`
 
 requests will be served on port: 3000
 
